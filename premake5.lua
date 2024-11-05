@@ -27,17 +27,20 @@ project "yaml-cpp"
 	-- }
 
     filter "configurations:Debug"
+        defines "QK_DEBUG" 
         runtime "Debug"
         symbols "On"
 
     filter "configurations:Release"
+        defines "QK_RELEASE"
         runtime "Release"
         symbols "On"
-        optimize "on"
+        optimize "On"
 
     filter "configurations:Dist"
+        defines "QK_DIST"
         runtime "Release"
         symbols "Off"
-        optimize "on"
+        optimize "Full"
 
 
